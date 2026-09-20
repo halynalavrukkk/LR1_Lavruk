@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №1 — Рівень 10-12 балів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        section {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        /* Стилі для Завдання 1 */
+        #name-letters-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+        #name-letters-list li {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        #name-letters-list li:hover {
+            background-color: #45a049;
+        }
+
+        /* Стилі для Завдання 3 */
+        #letters {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .letter-box {
+            width: 45px;
+            height: 45px;
+            border: 2px solid #2196F3;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: #e7f3fe;
+            color: #0b5ed7;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.1s;
+        }
+        .letter-box:hover {
+            transform: scale(1.1);
+            background-color: #d0e7ff;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #888;
+            background-color: #fff;
+        }
+        button:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Завдання 1 -->
+    <section>
+        <h2>Завдання 1: Список літер імені</h2>
+        <p>Наведіть мишею на літеру, щоб переглянути повідомлення:</p>
+        <ul id="name-letters-list"></ul>
+    </section>
+
+    <!-- Завдання 2 -->
+    <section>
+        <h2>Завдання 2: Динамічне введення студентів</h2>
+        <button id="start-prompt-btn">Запустити введення студентів</button>
+        <ol id="students-list"></ol>
+    </section>
+
+    <!-- Завдання 3 -->
+    <section>
+        <h2>Завдання 3: Блоки літер прізвища</h2>
+        <button id="toggle-blocks-btn">Показати блоки</button>
+        <div id="letters"></div>
+    </section>
+
+    <!-- Підключення скрипта з атрибутом defer замість type="module" -->
+    <script src="script.js" defer></script>
+</body>
+</html>
